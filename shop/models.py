@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.conf import settings
 # Create your models here.
 
 class item(models.Model):
@@ -12,3 +12,6 @@ class item(models.Model):
 
     def __str__(self):
         return '<{}> {}'.format(self.pk, self.name)
+
+class Post(models.Model):
+    author = models.ForeignKey(settings.AUTH_PASSWORD_VALIDATORS,on_delete=models.CASCADE)
