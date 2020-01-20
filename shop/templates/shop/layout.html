@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>장고 개빡치네</title>
-    <style>
-        body{background-color: #5b80b2;}
-    </style>
-</head>
-<body>
-    <h1>Ask Company</h1>
-    {% block content %}
-    {% endblock %}
+{% load static %}
+{%  extends "layout.html" %}
 
+{% block title %}shop by askcomapny
+{% endblock %}
 
-</body>
-</html>
+{% block extra_head%}
+    {{ block.super }}
+    <link rel="stylesheet" href=""{% static "shop/shop.css" %}" />
+{% endblock %}
+
+{% block extra_body %}
+    {{ block.super }}
+{% endblock %}
